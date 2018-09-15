@@ -1,0 +1,10 @@
+{
+  "baseURI": "test.zbjdev.com",
+  "domainURI": "zbjdev.com",
+  "staticLibURI": "//as.test.zbjdev.com",
+  "port": "3110",
+  "runtime": "local",
+  "customBuild": true,
+  "cacheCloudAppID": "105890",
+  "serviceCenterUrl": "zookeeper://172.26.5.60:2181"
+}

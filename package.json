@@ -1,19 +1,71 @@
 {
-  "name": "vue-template",
+  "name": "nodejs-jinrong-h5-web",
   "version": "1.0.0",
-  "description": "utopiajs",
-  "main": "index.js",
+  "description": "八戒金融H5项目模板",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack-dev-server --config ./build/webpack.local.conf.js --inline --hot --port 8888",
+    "build": "node build",
+    "start": "node www",
+    "boot": "supervisor www",
+    "test": "packge_env='product' && npm run build -- --env $packge_env && npm run static-server",
+    "dev-test": "packge_env='dev' && npm run build -- --env $packge_env && npm run static-server",
+    "static-server": "http-server ./node_modules/.ua-release-webroot -p 80"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JRFE/vue-template.git"
+  "main": "www",
+  "dependencies": {
+    "@zbj/utopiajs": "latest",
+    "axios": "0.15.3",
+    "babel-polyfill": "^7.0.0-beta.3",
+    "js-beautify": "1.6.14",
+    "querystring": "0.2.0",
+    "sockjs-client": "1.1.2",
+    "vue": "^2.5.13",
+    "vue-router": "2.3.0",
+    "vuex": "^3.0.1",
+    "vux": "2.7.7"
   },
-  "author": "flyerjay",
+  "author": "zhouqinghuai",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/JRFE/vue-template/issues"
-  },
-  "homepage": "https://github.com/JRFE/vue-template#readme"
+  "devDependencies": {
+    "@zbj/vue-mixin-loader": "0.0.2",
+    "autoprefixer": "6.7.2",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "7.1.1",
+    "babel-loader": "6.4.1",
+    "babel-plugin-component": "0.9.1",
+    "babel-plugin-transform-runtime": "6.22.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-2": "6.22.0",
+    "babel-register": "6.22.0",
+    "copy-webpack-plugin": "4.0.1",
+    "cross-env": "3.2.3",
+    "css-loader": "0.26.4",
+    "eslint": "3.14.1",
+    "eslint-config-standard": "6.2.1",
+    "eslint-friendly-formatter": "2.0.7",
+    "eslint-loader": "1.6.1",
+    "eslint-plugin-html": "2.0.0",
+    "eslint-plugin-promise": "3.4.0",
+    "eslint-plugin-standard": "2.0.1",
+    "extract-text-webpack-plugin": "2.1.0",
+    "file-loader": "0.10.1",
+    "friendly-errors-webpack-plugin": "1.6.1",
+    "glob": "7.1.1",
+    "http-server": "0.9.0",
+    "ip": "1.1.5",
+    "less": "2.7.2",
+    "less-loader": "3.0.0",
+    "optimize-css-assets-webpack-plugin": "1.3.0",
+    "ora": "1.1.0",
+    "rimraf": "2.6.1",
+    "style-loader": "0.13.2",
+    "url-loader": "0.5.8",
+    "vue-loader": "11.3.4",
+    "vue-style-loader": "2.0.3",
+    "vue-template-compiler": "^2.5.13",
+    "webpack": "2.3.2",
+    "webpack-dev-server": "2.4.1",
+    "webpack-hot-middleware": "2.17.1",
+    "webpack-merge": "4.0.0"
+  }
 }

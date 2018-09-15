@@ -1,0 +1,8 @@
+/app/public/views/widget
+/node_modules
+/npm-debug.log
+/app/logs
+node_modules/**
+.idea/**
+.DS_Store
+dist

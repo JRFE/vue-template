@@ -1,0 +1,58 @@
+.loading-indicator {
+  box-sizing: border-box;
+  background: #eee;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-top: 100px;
+  padding-bottom: 120px;
+  transition: opacity 318ms ease-in-out;
+
+  &-img {
+    background: url('./images/loading.gif') no-repeat center center;
+    background-size: 80px 80px;
+    width: 80px;
+    height: 90px;
+    position: absolute;
+    left: 50%;
+    margin-left: -40px;
+    top: 50%;
+    margin-top: -45px;
+    transition: all 250ms linear;
+  }
+  &.loaded {
+    opacity: 0;
+    .loading-indicator-img {
+      transform: translate3d(0, -40px, 0);
+    }
+  }
+  .loading-error {
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    top: 50%;
+    margin-top: -50px;
+    text-align: center;
+    color: #bbb;
+    font-size: 14px;
+    .cry-face-bg{
+      background: url("./images/cry-face.png") no-repeat center center;
+      height: 60px;
+      width: 60px;
+      margin: 0 auto;
+    }
+    .error-text {
+      margin: 10px 0;
+      a {
+        margin-left: 3px;
+        margin-right: 3px;
+        color: @main-color-blue;
+      }
+    }
+  }
+}

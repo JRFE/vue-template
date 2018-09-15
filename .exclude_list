@@ -1,0 +1,13 @@
+.svn/
+.git
+.idea
+.git/
+robots.txt
+idea
+.idea
+*.log
+*.pid
+.gitlab-ci.yml
+.gitignore
+.ds_store
+Dockerfile

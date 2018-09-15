@@ -1,0 +1,9 @@
+stages:
+  - deploy
+
+npm-publish:
+  stage: deploy
+  script:
+  - npm publish
+  only:
+  - master

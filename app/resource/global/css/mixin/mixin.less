@@ -1,0 +1,83 @@
+// 主色
+@main-color-blue: #55a8fd;
+
+@main-color-green: #1fb5ad;
+
+// red yellow blue （比如临期，超期色调）
+@deadline-color-red: #ff0000;
+@deadline-color-yellow: #ff7505;
+
+// 优先级颜色
+@task-priority-high: #fb8181;
+@task-priority-middle: #fcd08b;
+@task-priority-low: #999999;
+
+// 圆角
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+  border-radius: @radius;
+}
+
+// Text overflow
+// -------------------------
+// Requires inline-block or block for proper styling
+.text-overflow() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.box-shadow(@shadow) {
+  //-moz-box-shadow: @shadow;
+  //-webkit-box-shadow: @shadow; // iOS <4.3 & Android <4.1
+  box-shadow: @shadow;
+}
+
+
+// 针对flexible.js对不同分辨率做适配处理
+// 原则:
+// 1. 字体大小保持px单位，只是根据不同分辨率成倍变化
+// 2. 对于某些元素的宽度与高度需要和文字做类似处理,例如，含有文字的列表高度，同样会根据不同分辨率做适配处理
+// 3. 需要字体大小已设计稿为750准，例如设计稿750下标题栏高88px,
+.px2dpr(@name, @px){
+  @{name}: @px / 2 * 1px;
+
+  [data-dpr="2"] & {
+    @{name}: @px * 1px;
+  }
+
+  [data-dpr="3"] & {
+    @{name}: @px / 2 * 3px;
+  }
+}
+
+// 3. 设计稿与750px为准,对于需要将px单位转换为rem单位的，
+@screen-width: 750;
+.px2rem(@name, @px){
+  @{name}: @px / (@screen-width/10) * 1rem;
+}
+
+//flex弹性盒子兼容处理
+.flex() {
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+//弹性盒子所占比例
+.flex-item(@num : 1) {
+    -webkit-box-flex: @num;      /* OLD - iOS 6-, Safari 3.1-6 */
+    -moz-box-flex: @num;         /* OLD - Firefox 19- */
+    -webkit-flex: @num;          /* Chrome */
+    -ms-flex: @num;              /* IE 10 */
+    flex: @num;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+//弹性盒子所占顺序
+.flex-order(@order : 1) {
+    -webkit-box-ordinal-group: @order;   /* OLD - iOS 6-, Safari 3.1-6 */
+    -moz-box-ordinal-group: @order;      /* OLD - Firefox 19- */
+    -ms-flex-order: @order;              /* TWEENER - IE 10 */
+    -webkit-order: @order;               /* NEW - Chrome */
+    order: @order;                       /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}

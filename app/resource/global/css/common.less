@@ -1,0 +1,50 @@
+@import "./base-var/vars.less";
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.inline { display: inline-block; }
+
+.tc { text-align: center; }
+
+.tr { text-align: right; }
+
+.fl { float: left; }
+
+.fr { float: right; }
+
+.oh { overflow: hidden; }
+
+.zbj-btn-base() {
+  color: #fff;
+  background: @logo-color;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.zbj-btn {
+  .zbj-btn-base();
+  .px2rem(width, 480);
+  .px2rem(line-height, 80);
+  .px2rem(border-radius, 80);
+  .px2dpr(font-size, 32);
+}
+
+.zbj-btn-sm {
+  .zbj-btn-base();
+  .px2rem(width, 150);
+  .px2rem(line-height, 50);
+  .px2rem(border-radius, 50);
+  .px2dpr(font-size, 24);
+}
+

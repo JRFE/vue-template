@@ -1,0 +1,82 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "@zbj/lib-xss@latest",
+        "scope": "@zbj",
+        "escapedName": "@zbj%2flib-xss",
+        "name": "@zbj/lib-xss",
+        "rawSpec": "latest",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/rgy/zbj_work/git/nodejs-jr-bx-web/node_modules/@zbj/utopiajs"
+    ]
+  ],
+  "_from": "@zbj/lib-xss@latest",
+  "_id": "@zbj/lib-xss@0.0.4",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/@zbj/lib-xss",
+  "_nodeVersion": "6.3.0",
+  "_npmUser": {},
+  "_npmVersion": "3.10.3",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "@zbj/lib-xss@latest",
+    "scope": "@zbj",
+    "escapedName": "@zbj%2flib-xss",
+    "name": "@zbj/lib-xss",
+    "rawSpec": "latest",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "/@zbj/utopiajs"
+  ],
+  "_resolved": "http://npm.bjren123.com/@zbj%2flib-xss/-/lib-xss-0.0.4.tgz",
+  "_shasum": "9d69923a6b0bd07fc38080e268ef7f5adb14664f",
+  "_shrinkwrap": null,
+  "_spec": "@zbj/lib-xss@latest",
+  "_where": "/Users/rgy/zbj_work/git/nodejs-jr-bx-web/node_modules/@zbj/utopiajs",
+  "author": {
+    "name": "linian"
+  },
+  "committer": "runner",
+  "dependencies": {
+    "underscore": "^1.8.3",
+    "url": "^0.11.0",
+    "xss": "^0.3.1"
+  },
+  "description": "一个防止xss攻击的模块",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "istanbul": "^0.4.4",
+    "mocha": "^3.0.2",
+    "mochawesome": "^1.4.0",
+    "mockjs": "^1.0.1-beta2",
+    "supertest": "^2.0.0"
+  },
+  "dist": {
+    "shasum": "9d69923a6b0bd07fc38080e268ef7f5adb14664f",
+    "tarball": "http://npm.bjren123.com/@zbj%2flib-xss/-/lib-xss-0.0.4.tgz"
+  },
+  "gitHead": "59a6781b3d4bab772a0526fb88faecac498aeb60",
+  "keywords": [
+    "express",
+    "js-xss"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "name": "@zbj/lib-xss",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git"
+  },
+  "scripts": {
+    "test": "istanbul cover node_modules/mocha/bin/_mocha"
+  },
+  "version": "0.0.4"
+}
