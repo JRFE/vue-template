@@ -4,7 +4,6 @@ const glob = require('glob');
 const utils = require('./utils');
 const commonConfig = require('./config').getConfig('common');
 const vueLoaderConfig = require('./vue-loader.conf');
-const vuxLoader = require('vux-loader');
 
 const webpackConfig = module.exports = {
   entry: Object.assign(utils.getEntry(`${commonConfig.resourcePath}/page/*/index.js`), {
@@ -152,10 +151,3 @@ const webpackConfig = module.exports = {
     }
   ]
 }
-
-module.exports = vuxLoader.merge(webpackConfig, {
-  options: {},
-  plugins: [{
-    name: 'vux-ui'
-  }]
-})

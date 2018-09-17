@@ -36,7 +36,7 @@ module.exports = function (pageName, data) {
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="format-detection" content="telephone=no, address=no">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
-    <title>戒易花</title>
+    <title>八戒金融H5项目骨架</title>
     <meta name='keywords' content=''/>
     <meta name='description' content=''/>
     <link rel="dns-prefetch" href="${UA.config.staticLibURI}">
@@ -50,9 +50,6 @@ module.exports = function (pageName, data) {
         staticLibURI: ${UA.config.staticLibURI ? `"${UA.config.staticLibURI}"` : null}, // 前端静态资源 as.zbjimg.com
         qiniuUploadTokenUrl: ${UA.config.qiniuUploadTokenUrl ? `"${UA.config.qiniuUploadTokenUrl}"` : null},
         runtime: ${UA.config.runtime ? `"${UA.config.runtime}"` : null},
-        shopurl: ${UA.config.shopurl ? `"${UA.config.shopurl}"` : null},
-        data: ${JSON.stringify(data)},
-        rId: ${JSON.stringify(UA.config.rId)}
       };
     </script>
     <script>
